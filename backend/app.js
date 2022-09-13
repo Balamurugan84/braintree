@@ -8,9 +8,9 @@ app.use(express.json());
 
 const config ={
     environment:braintree.Environment.Sandbox,
-    merchantId:'pw9gkb87zjsjypkn',
-    publicKey:'jpnncypvdwzfwwmg',
-    privateKey:'0628f1bd948bdcb84d6235f9b1df6cbb'
+    merchantId: process.env.merchantId,
+    publicKey: process.env.publicKey,
+    privateKey: process.env.privateKey
 }
 
 const gateway = new braintree.BraintreeGateway(config)
